@@ -16,6 +16,8 @@
     "url": "https://github.com/geobarteam/node-play-by-play/issues"
   },
   "dependencies": {
-    "express": "~4.13.4"
+    "express": "~4.13.4",
+    "lodash": "~4.11.1",
+    "body-parser": "~1.15.0"
   }
 }

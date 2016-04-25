@@ -5,6 +5,7 @@
     },
     "files": [
         "./typings/tsd.d.ts",
-        "./index.ts"
+        "./index.ts",
+        "./cats.ts"
     ]
 }

@@ -1,11 +1,15 @@
 import * as express from "express";
-
-var http = require('http');
+import * as bodyParser from "body-parser"
 var app = express();
 
-app.get('/', function(req,res){
-    res.send('Hello: world');
-});
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+
+/// <reference path="./cats.ts" />
+import * as cats from "./cats";
+cats.cats(app);
 
 
 var server = app.listen(3000, function () {

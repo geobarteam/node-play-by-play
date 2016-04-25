@@ -1,10 +1,14 @@
 "use strict";
 var express = require("express");
-var http = require('http');
+var bodyParser = require("body-parser");
 var app = express();
-app.get('/', function (req, res) {
-    res.send('Hello: world');
-});
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+/// <reference path="./cats.ts" />
+var cats = require("./cats");
+cats.cats(app);
 var server = app.listen(3000, function () {
     console.log('Server running at http://127.0.0.1:3000/');
 });
